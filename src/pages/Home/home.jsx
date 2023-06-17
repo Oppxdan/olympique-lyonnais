@@ -4,10 +4,10 @@ import Nav from '../../components/navigation/Nav';
 
 function Home() {
   return (
-    <div>
+    <>
         <Nav />
         <Outlet />
-    </div>
+    </>
   );
 }
 
