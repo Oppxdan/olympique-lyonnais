@@ -3,6 +3,7 @@ import logo from '../../logo.png';
 import '../../App.css';
 import { Link, useLocation } from 'react-router-dom';
 import { NavContainer, NavRight, LyonLogo } from './Nav-styles';
+import { slide as Menu } from 'react-burger-menu';
 
 function Nav() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,20 +29,14 @@ function Nav() {
 
   return (
     <NavContainer className={isScrolled ? 'sticky' : ''}>
+        
+      
       <Link to="/">
         <LyonLogo
           src={logo}
           alt="logo"
           isScrolled={isScrolled}
           isHomePage={isHomePage}
-          css={{
-            width: isScrolled || !isHomePage ? '180px' : '40vw',
-            position: isScrolled || !isHomePage ? 'static' : 'absolute',
-            right: isScrolled || !isHomePage ? 'unset' : '-60px',
-            top: isScrolled || !isHomePage ? 'unset' : '20vh',
-            height: 'auto',
-            transition: 'all 0.3s ease-in',
-          }}
         />
       </Link>
       <NavRight>

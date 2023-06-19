@@ -24,3 +24,7 @@ code {
   z-index: 100;
   /* Add any additional styles for the sticky state */
 }
+
+a {
+  text-decoration: none;
+}
